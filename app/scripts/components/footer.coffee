@@ -9,7 +9,7 @@ Footer = React.createClass
         <h4>NTPU MIS </h4>
          <p className="text-muted">National Taipei University, 151, University Rd., San Shia, Taipei, 237 Taiwan </p>
          <p className="text-muted">&copy; 2014 National Taiwan University Institute of Information Management. All Rights Reserved.</p>
-          <i className="glyphicon glyphicon-hand-right"></i> Find us on  <a target="_blank" href="www.facebook.com/176780765671055">Facebook</a>
+         <i className="glyphicon glyphicon-hand-right"></i> Find us on  <a target="_blank" href="www.facebook.com/176780765671055">Facebook</a>
         </div>
         </div>
     </footer>
