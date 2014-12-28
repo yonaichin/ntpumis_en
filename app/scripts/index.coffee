@@ -80,5 +80,5 @@ Main = React.createClass
     <Footer />
     </div>
 
-module.exports = React.renderComponent(Main(), document.querySelector('#app'))
+module.exports = React.render(Main(), document.querySelector('#app'))
   
