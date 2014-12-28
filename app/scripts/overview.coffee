@@ -2,7 +2,7 @@
 Navbar = require('./components/navbar')
 Footer = require('./components/footer')
 Faculty = require('./components/faculty')
-Course = require('./components/Course')
+Course = require('./components/course')
 React = require('react')
 
 

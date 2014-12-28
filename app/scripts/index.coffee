@@ -1,9 +1,9 @@
-# @cjsx React.DOM
+# @jsx React.DOM
 
 React = require('react')
 Footer = require('./components/footer')
 Navbar = require('./components/navbar')
-Carousel = require('./components/Carousel')
+Carousel = require('./components/carousel')
 Content = React.createClass
   render:->
     <div>
