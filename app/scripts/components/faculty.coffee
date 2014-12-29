@@ -5,6 +5,7 @@ ReactBootstrap = require('react-bootstrap')
 Button = ReactBootstrap.Button
 OverlayMixin = ReactBootstrap.OverlayMixin
 Modal = ReactBootstrap.Modal
+Table = ReactBootstrap.Table
 Faculty = React.createClass
   mixins: [OverlayMixin]
   getInitialState: ->
@@ -41,16 +42,29 @@ Faculty = React.createClass
         teacher_extension =val.extension
       )
    
-    
     <Modal title={teacher_name} onRequestHide={this.handleToggle}>
       <div className="modal-body">
-        <h2>{teacher_title.toUpperCase()}</h2>
-        <p>{teacher_domain}</p>
-        <p>{teacher_degree}</p>
-        <p>{teacher_office}</p>
-        
-        <p>{teacher_tel}</p>
-        <p>{teacher_extension}</p>
+        <Table>
+        <h5>{teacher_title.toUpperCase()}</h5>
+          <tbody>
+            <tr>
+              <td>Domain</td>
+              <td>{teacher_domain}</td>
+            </tr>
+            <tr>
+              <td>Degree</td>
+              <td>{teacher_degree}</td>
+            </tr>
+            <tr>
+              <td>Office</td>
+              <td>{teacher_office}</td>
+            </tr>
+            <tr>
+              <td>Tel</td>
+              <td>{teacher_tel} #{teacher_extension}</td>
+            </tr>
+          </tbody>
+        </Table>
       </div>
       <div className="modal-footer">
         <Button onClick={@handleToggle}>Close</Button>
