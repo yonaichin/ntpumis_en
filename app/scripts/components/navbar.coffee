@@ -43,8 +43,8 @@ Navbar = React.createClass
                 <li className="dropdown">
                   <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span className="glyphicon glyphicon-bookmark" aria-hidden="true"></span> Conference </a>
                   <ul className="dropdown-menu" role="menu">
-                    <li><a href="#"> Marketing Review</a></li>
-                    <li><a href="#">Electronic Commerce Studies</a></li>
+                    <li><a href="http://marketingreview.com.tw/" target="_blank"> Marketing Review</a></li>
+                    <li><a href="http://ecs.academic-publication.org/" target="_blank">Electronic Commerce Studies</a></li>
                   </ul>
                 </li>
                 
