@@ -27,9 +27,9 @@ Navbar = React.createClass
                 <li className="dropdown">
                   <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span className="glyphicon glyphicon-book" aria-hidden="true"></span> Research </a>
                   <ul className="dropdown-menu" role="menu">
-                    <li><a href="#">Research Database</a></li>
-                    <li><a href="#">Presentations and Publications</a></li>
-                    <li><a href="#">Theses</a></li>
+                    <li><a href="http://120.126.130.136/library/download/mainpage/02-04.htm" target="_blank">Research Database</a></li>
+                    <li><a href="research.html#publications">Presentations and Publications</a></li>
+                    <li><a href="research.html#theses">Theses</a></li>
                   </ul>
                 </li>
                 <li className="dropdown">
