@@ -6,17 +6,22 @@ NavItem = React.createClass
   getInitialState: ->
     currentActiveID:1
   eventHandler:->
-    console.log 'currentID',@props.navsItemId
-    @setState 
-      currentActiveID: @props.navsItemId
+    @props.switchTab(@props.navsItemId)
   render:->
     classes = cx
-      'active':false
-    
-    #NavItem render return start
+      'active': if @props.currentActiveID is @props.navsItemId then true else false
+
+    #NavItem render return starts
     <li className={classes} onClick={@eventHandler}><a href={@props.href}>{@props.title}</a></li>
 
 Sidebar = React.createClass
+  displayName: 'Sidebar'
+  getInitialState: ->
+    currentActiveID: 0
+
+  eventHandler: (idx)->
+    @setState
+      currentActiveID:idx
   render:->
     NavItemsContent = [
       {
@@ -24,15 +29,18 @@ Sidebar = React.createClass
         href: "#publications"
       }
       {
-        title: "Theses"
+            title: "Theses"
         href: "#theses"
       }
-    ].map((val,idx)->
+    ].map((val,idx)=>
       <NavItem href = {val.href}
                        title ={val.title}
-                       navsItemId={idx}/>
+                       navsItemId={idx}
+                       currentActiveID={@state.currentActiveID}
+                       switchTab={@eventHandler}
+                       />
       )
-    Navs = 
+    Navs =
       <ul className="nav  nav-stacked nav-pills">
            {NavItemsContent }
       </ul>
