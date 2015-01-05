@@ -3,11 +3,11 @@ API_HOST = process.env.API_HOST
 thesis =
   getList :(thesisType='thesis') ->
     list = {}
-    data = 
+    data =
       "type": thesisType
     $.ajax
       async:false
-      # headers: 
+      # headers:
       #   'Accept': 'application/json'
       #   'Content-Type': 'application/json'
       type:'POST'
@@ -17,20 +17,30 @@ thesis =
     .done((result)->
       list = result
       )
-    list 
-
-  getThesisListbyYear :(year)->
-    year = parseInt year
-    ori_list = @getList('thesis')
-    console.log ori_list
-    list = list.map((val,idx)->
-      yearArr.push(val.year)
-    )
-    yearArr = _.uniq(yearArr)
-    list =_.where(ori_list,{"year":year})
     list
 
+  getThesisListByYear :()->
+    list = @getList('thesis')
+    yearArr = []
+    list.map (val) ->
+      yearArr.push val.year
 
+    yearArr = _.uniq(yearArr)
+
+    objArrByYear = []
+    $.map yearArr, (val, idx) ->
+      tmpObj = {}
+      dataSet = _.where(list,
+        year: val
+      )
+      tmpObj =
+        year: yearArr[idx]
+        dataSet: dataSet
+
+      objArrByYear.push tmpObj
+      
+    objArrByYear
+    
 
 
 

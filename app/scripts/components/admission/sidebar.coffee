@@ -5,19 +5,21 @@ cx = require 'react/lib/cx'
 NavItem = React.createClass
   
   eventHandler:->
-    @props.switchTab(@props.navsItemId)
+    @props.switchTab(@props.navsItemId,@props.href)
   render:->
 
     classes = cx
       'active': if @props.currentActiveID is @props.navsItemId then true else false
 
     #NavItem render return start
-    <li className={classes} onClick={@eventHandler}><a href={@props.href}>{@props.title}</a></li>
+    <li className={classes} onClick={@eventHandler}><a>{@props.title}</a></li>
 
 Sidebar = React.createClass
+  displayName:'Sidebar'
   getInitialState: ->
     currentActiveID:0
-  eventHandler:(idx)->
+  eventHandler:(idx,href)->
+    @props.displayItem href
     @setState
       currentActiveID:idx
 
@@ -26,11 +28,11 @@ Sidebar = React.createClass
     NavItemsContent = [
       {
         title: "Admission Regulations"
-        href: "#regulations"
+        href: "regulations"
       }
       {
         title: "Past Examination"
-        href: "#examination"
+        href: "examination"
       }
     ].map((val,idx)=>
       <NavItem href = {val.href}
