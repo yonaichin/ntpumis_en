@@ -5,6 +5,7 @@ Footer = require('./components/footer')
 Navbar = require('./components/navbar')
 Carousel = require('./components/carousel')
 Content = React.createClass
+  displayName: 'Main'
   render:->
     <div>
     <hr className="featurette-divider"/> 

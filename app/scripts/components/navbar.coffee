@@ -35,9 +35,9 @@ Navbar = React.createClass
                 <li className="dropdown">
                   <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span className="glyphicon glyphicon-road" aria-hidden="true"></span> Admission </a>
                   <ul className="dropdown-menu" role="menu">
-                    <li><a href="#">Admission Regulations</a></li>
-                    <li><a href="#">Past Examination</a></li>
-                    <li><a href="#">Application Instructions</a></li>
+                    <li><a href="admission.html#">Admission Regulations</a></li>
+                    <li><a href="admission.html#">Past Examination</a></li>
+                    <li><a href="http://www.ntpu.edu.tw/english/intlsdt.php" target="_blank">Application Instructions</a></li>
                   </ul>
                 </li>
                 <li className="dropdown">
