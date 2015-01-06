@@ -3,7 +3,7 @@ cx = require 'react/lib/cx'
 
 
 NavItem = React.createClass
-  
+
   eventHandler:->
     @props.switchTab(@props.navsItemId,@props.href)
   render:->
@@ -33,7 +33,7 @@ Sidebar = React.createClass
         href: "theses"
       }
     ].map((val,idx)=>
-      <NavItem href = {val.href}
+      <NavItem key={idx} href = {val.href}
                        title ={val.title}
                        navsItemId={idx}
                        currentActiveID={@state.currentActiveID}

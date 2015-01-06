@@ -4,7 +4,7 @@ thesis =
   getList :(thesisType='thesis') ->
     list = {}
     data =
-      "type": thesisType
+      "thesis_type": thesisType
     $.ajax
       async:false
       # headers:
@@ -19,8 +19,8 @@ thesis =
       )
     list
 
-  getThesisListByYear :()->
-    list = @getList('thesis')
+  getListByYear :(type='publication')->
+    list = @getList(type)
     yearArr = []
     list.map (val) ->
       yearArr.push val.year
@@ -38,9 +38,9 @@ thesis =
         dataSet: dataSet
 
       objArrByYear.push tmpObj
-      
+
     objArrByYear
-    
+
 
 
 
