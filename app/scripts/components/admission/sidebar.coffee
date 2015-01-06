@@ -12,7 +12,7 @@ NavItem = React.createClass
       'active': if @props.currentActiveID is @props.navsItemId then true else false
 
     #NavItem render return start
-    <li className={classes} onClick={@eventHandler}><a>{@props.title}</a></li>
+    <li className={classes} onClick={@eventHandler}><a href="#">{@props.title}</a></li>
 
 Sidebar = React.createClass
   displayName:'Sidebar'
