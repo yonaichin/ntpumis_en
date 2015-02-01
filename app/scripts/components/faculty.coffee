@@ -11,14 +11,14 @@ Faculty = React.createClass
   getInitialState: ->
     isModalOpen: false
   handleToggle: (e)->
-    detail_id =  if e? then $(e.target).attr('id') else null  
-    @setState 
+    detail_id =  if e? then $(e.target).attr('id') else null
+    @setState
       isModalOpen: not @state.isModalOpen
       detail_id:detail_id
   renderOverlay:->
-    if not @state.isModalOpen 
+    if not @state.isModalOpen
       return <span/>
-    
+
     teacher_name      =''
     teacher_title     =''
     teacher_degree    =''
@@ -28,7 +28,7 @@ Faculty = React.createClass
     teacher_email     =''
     teacher_tel       =''
     teacher_extension =''
-    
+
     @props.teachersData.map((val,idx)=>
       if val.id is parseInt(@state.detail_id)
         teacher_name      = val.name
@@ -41,7 +41,7 @@ Faculty = React.createClass
         teacher_tel       =val.tel
         teacher_extension =val.extension
       )
-   
+
     <Modal title={teacher_name} onRequestHide={this.handleToggle}>
       <div className="modal-body">
         <Table>
@@ -71,7 +71,7 @@ Faculty = React.createClass
       </div>
     </Modal>
 
-  
+
   render: ->
     teachersData = @props.teachersData
 
@@ -82,17 +82,17 @@ Faculty = React.createClass
       else
         domain = value.domain
 
-        
-      <div> 
+
+      <div>
           <div className="col-lg-4">
-            <img className="img-circle" width={140} height={140} src="images/carousel/carousel_2.jpg"/>
+            <img className="img-circle" width={140} height={140} src={value.image_url}/>
             <h3>{value.name}</h3>
             <p>{domain}</p>
             <p><button  ref={'detail_btn_'+(value.id)}  id={value.id} onClick={@handleToggle} className="btn btn-default" >View details </button></p>
-              
+
           </div>
       </div>
-      
+
     )
     <div>
         <hr id="faculty"  className="featurette-divider"/>
@@ -107,13 +107,13 @@ Faculty = React.createClass
 
 
 
-    
-  
-    
+
+
+
 
 Main = React.createClass
   render: ->
     teachersData = Teacher.getList('en')
     <Faculty teachersData={teachersData}/>
-    
+
 module.exports = Main
