@@ -1,7 +1,9 @@
 
 API_HOST = process.env.API_HOST
 thesis =
+
   getList :(thesisType='thesis') ->
+
     list = {}
     data =
       "thesis_type": thesisType

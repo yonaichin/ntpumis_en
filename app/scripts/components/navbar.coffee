@@ -29,14 +29,14 @@ Navbar = React.createClass
                   <ul className="dropdown-menu" role="menu">
                     <li><a href="http://120.126.130.136/library/download/mainpage/02-04.htm" target="_blank">Research Database</a></li>
                     <li><a href="research.html">Publications & Theses</a></li>
-                    
+
                   </ul>
                 </li>
                 <li className="dropdown">
                   <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span className="glyphicon glyphicon-road" aria-hidden="true"></span> Admission </a>
                   <ul className="dropdown-menu" role="menu">
                     <li><a href="admission.html#">Admission Regulations</a></li>
-                    <li><a href="admission.html#">Past Examination</a></li>
+                    <li><a href="http://lms.ntpu.edu.tw/board.php?courseID=14133&f=doc&folderID=0&cid=256410" target="_blank">Past Examination</a></li>
                     <li><a href="http://www.ntpu.edu.tw/english/intlsdt.php" target="_blank">Application Instructions</a></li>
                   </ul>
                 </li>
@@ -47,8 +47,8 @@ Navbar = React.createClass
                     <li><a href="http://ecs.academic-publication.org/" target="_blank">Electronic Commerce Studies</a></li>
                   </ul>
                 </li>
-                
-                
+
+
               </ul>
             </div>
           </div>
@@ -59,5 +59,5 @@ Navbar = React.createClass
 
 
 
- 
+
 module.exports = Navbar
