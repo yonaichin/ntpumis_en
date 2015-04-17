@@ -27,7 +27,7 @@ thesis =
     list.map (val) ->
       yearArr.push val.year
 
-    yearArr = _.uniq(yearArr)
+    yearArr = _.uniq(yearArr).sort((a,b) -> b-a)
 
     objArrByYear = []
     $.map yearArr, (val, idx) ->
