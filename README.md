@@ -1,7 +1,7 @@
 NTPU_MIS_EN
 =====================
 
-Forked from yeoman gulp-webapp but added some features for our web front-end template
+This project is built by [react-bootstrap](http://react-bootstrap.github.io)
 
 ## key setting
 1. coffee script
